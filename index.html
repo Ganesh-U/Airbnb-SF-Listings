@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="San Francisco Airbnb Listings - Web Development Project by Ganesh Umasankar"
+    />
+    <meta name="author" content="Ganesh Umasankar" />
+    <title>SF Airbnb Listings | Ganesh Umasankar</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <h1 class="logo">SF Listings</h1>
+      </div>
+
+      <div class="sidebar-content">
+        <div class="search-section">
+          <input
+            type="search"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search by name or area..."
+            aria-label="Search"
+          />
+        </div>
+
+        <div class="filters">
+          <h3>Filters</h3>
+
+          <div class="filter-item">
+            <label for="priceSort">Price</label>
+            <select id="priceSort" class="select-input">
+              <option value="">All Prices</option>
+              <option value="asc">Low to High</option>
+              <option value="desc">High to Low</option>
+            </select>
+          </div>
+
+          <div class="filter-item">
+            <label for="roomFilter">Room Type</label>
+            <select id="roomFilter" class="select-input">
+              <option value="">All Types</option>
+              <option value="Entire home/apt">Entire Home</option>
+              <option value="Private room">Private Room</option>
+              <option value="Shared room">Shared Room</option>
+            </select>
+          </div>
+
+          <button id="resetFilters" class="reset-button">Reset Filters</button>
+        </div>
+
+        <div class="info-section">
+          <div class="info-item">
+            <span class="info-label">Listings</span>
+            <span class="info-value" id="listingCount">0</span>
+          </div>
+        </div>
+      </div>
+
+      <footer class="sidebar-footer">
+        <p>Self-Assessment_2</p>
+        <p>Made by Ganesh Umasankar with ❤️</p>
+      </footer>
+    </nav>
+
+    <main class="main-area">
+      <header class="page-header">
+        <h2>Available Accommodations</h2>
+      </header>
+
+      <div id="loadingSpinner" class="loading">
+        <div class="spinner"></div>
+        <p>Loading listings...</p>
+      </div>
+
+      <div id="errorMessage" class="error-message hidden">
+        <span id="errorText">Unable to load listings</span>
+      </div>
+
+      <section id="listings" class="listings-grid"></section>
+
+      <div id="noResults" class="no-results hidden">
+        <h3>No listings found</h3>
+        <p>Try adjusting your search or filters</p>
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
